@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enhancesio - Login/Signup</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/c00227cd9f.js"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+
+       
+        <link rel="stylesheet" href="chat/css/styles.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="/" class="title"><h1>Enhancesio</h1></a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a href="/">Home</a>
+                    </li>
+                    <% if(logged == true){ %>
+                        <% }else{ %>
+                      <li class="nav-item"><a href="/login">Login</a></li>
+                      <% } %>
+                    <li class="nav-item">
+                        <a href="/questions">Questions</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="chat">
+            <div class="chat_window">
+                <div class="top_menu">
+                    <div class="title">Chat</div>
+                </div>
+                <ul class="messages">
+                	<!---message template---><!--- left /right user side--->
+                	<li class="message appeared">
+	                        <div style = "color: grey; font-size: small;"id= "status"class="text"></div>
+                	</li>
+                <!---message template / --->
+                </ul>
+                
+                <div class="bottom_wrapper clearfix">
+                    <div class="message_input_wrapper">
+                        <input
+                            id = "msg"
+                            class="message_input"
+                            placeholder="Type your message here..."
+                        />
+                    </div>
+                    <div id = "submit"class="send_message">
+                        <div class="icon"></div>
+                        <div class="text">Send</div>
+                    </div>
+                </div>
+            </div>
+            <div class="message_template">
+                <li class="message">
+                    <div class="avatar"></div>
+                    <div class="text_wrapper">
+                        <div class="text"></div>
+                    </div>
+                </li>
+            </div>
+        </div>
+         <!--chat headers-->
+         <script src = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src = "chat/script/main.js"></script>
+ 
+    </body>
+</html>

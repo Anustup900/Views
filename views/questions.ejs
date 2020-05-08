@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enhancesio</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/c00227cd9f.js"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="questions/css/styles.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="/" class="title"><h1>Enhancesio</h1></a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"><a href="/">Home</a></li>
+                  <% if(logged == true){ %>
+                    <% }else{ %>
+                  <li class="nav-item"><a href="/login">Login</a></li>
+                  <% } %>
+                </ul>
+            </div>
+        </nav>
+        <a class="nextanchor" href="#que2">
+            <div class="quebtn next">
+                <i class="fas fa-chevron-circle-down fa-2x"></i>
+                <p>scroll or click here</p>
+            </div>
+        </a>
+
+        <div class="que-form-field">
+            <div class="row top-banner que thankyou-submit" id="">
+                <div class="col-lg-12">
+                    <h1>
+                        Please Answer the following Questions.
+                    </h1>
+                </div>
+            </div>
+            <form action="/results" method="post">
+                <div class="que row" id="que1">
+                    <div class="col-lg-6">
+                        <h1>
+                            Do you have a consistently depressed mood for at
+                            least 2 weeks?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value = "Yes"name="DepressedMood" id="q1o1" required />
+                            <label for="q1o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value = "No"name="DepressedMood" id="q1o2" />
+                            <label for="q1o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que2">
+                    <div class="col-lg-6">
+                        <h1>
+                            Have you lost interest in activities which
+                            previously seemed interesting to you?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Yes" name="LostInterest" id="q2o1" required/>
+                            <label for="q2o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value="No"name="LostInterest" id="q2o2" />
+                            <label for="q2o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que3">
+                    <div class="col-lg-6">
+                        <h1>
+                            Do you have low energy levels and get tired easily?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value ="Yes" name="Unenergetic" id="q3o1" required/>
+                            <label for="q3o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value = "No"name="Unenergetic" id="q3o2" />
+                            <label for="q3o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que4">
+                    <div class="col-lg-6">
+                        <h1>
+                            How would you rate your concentration level?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value = "High" name="LessConcentration" id="q4o1" required/>
+                            <label for="q4o1"><h3 class="o1">High</h3></label>
+
+                            <input type="radio" value = " Medium" name="LessConcentration" id="q4o2" />
+                            <label for="q4o2"><h3 class="o2">Medium</h3></label>
+
+                            <input type="radio" value="Low" name="LessConcentration" id="q4o3" />
+                            <label for="q4o3"><h3 class="o3">Low</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que5">
+                    <div class="col-lg-6">
+                        <h1>
+                            Do you have low confidence, or high guilt?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value = "Yes"name="Guilt" id="q5o1" required/>
+                            <label for="q5o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value="No" name="Guilt" id="q5o2" />
+                            <label for="q5o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que6">
+                    <div class="col-lg-6">
+                        <h1>
+                            How would you rate your decision-making capability?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value = "High"name="Decisiveness" id="q6o1" required/>
+                            <label for="q6o1"><h3 class="o1">High</h3></label>
+
+                            <input type="radio"value="Medium" name="Decisiveness" id="q6o2" />
+                            <label for="q6o2"><h3 class="o2">Medium</h3></label>
+
+                            <input type="radio" value = "Low" name="Decisiveness" id="q6o3" />
+                            <label for="q6o3"><h3 class="o3">Low</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que7">
+                    <div class="col-lg-6">
+                        <h1>
+                            Do you have disturbed sleep?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Yes" name="DisturbedSleep" id="q7o1" required/>
+                            <label for="q7o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value="No" name="DisturbedSleep" id="q7o2" />
+                            <label for="q7o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que8">
+                    <div class="col-lg-6">
+                        <h1>
+                            Has your appetite and weight recently :
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Increased" name="Appetite" id="q8o1" required/>
+                            <label for="q8o1"
+                                ><h3 class="o1">Increased</h3></label
+                            >
+
+                            <input type="radio" value= "Decreased" name="Appetite" id="q8o2" />
+                            <label for="q8o2"
+                                ><h3 class="o2">Decreased</h3></label
+                            >
+
+                            <input type="radio" value="Neither" name="Appetite" id="q8o3" />
+                            <label for="q8o3"
+                                ><h3 class="o3">Neither</h3></label
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que9">
+                    <div class="col-lg-6">
+                        <h1>
+                            Do you have suicidal and/or negative thoughts?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Yes" name="NegativeThoughts" id="q9o1" required/>
+                            <label for="q9o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value="No" name="NegativeThoughts" id="q9o2" />
+                            <label for="q9o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que10">
+                    <div class="col-lg-6">
+                        <h1>
+                            Do you have sudden emotional outbreaks?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Yes" name="EmotionalOutbreaks" id="q10o1" required/>
+                            <label for="q10o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value="No" name="EmotionalOutbreaks" id="q10o2" />
+                            <label for="q10o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que11">
+                    <div class="col-lg-6">
+                        <h1>
+                            How do you feel?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Restless and agitated" name="Feeling" id="q11o1" required/>
+                            <label for="q11o1"
+                                ><h3 class="o1">
+                                    Restless and agitated
+                                </h3></label
+                            >
+
+                            <input type="radio" value="Decreased Activity" name="Feeling" id="q11o2" />
+                            <label for="q11o2"
+                                ><h3 class="o2">Decreased activity</h3></label
+                            >
+
+                            <input type="radio" value ="Neither" name="Feeling" id="q11o3" />
+                            <label for="q11o3"
+                                ><h3 class="o3">Neither</h3></label
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que12">
+                    <div class="col-lg-6">
+                        <h1>
+                            Do you have frequent mood swings?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Yes" name="MoodSwings" id="q12o1" required/>
+                            <label for="q12o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value="No" name="MoodSwings" id="q12o2" />
+                            <label for="q12o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que13">
+                    <div class="col-lg-6">
+                        <h1>
+                            Do you show Psychotic symptoms?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Yes" name="PsychoticSymptom" id="q13o1" required/>
+                            <label for="q13o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value="No" name="PsychoticSymptom" id="q13o2" />
+                            <label for="q13o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que14">
+                    <div class="col-lg-6">
+                        <h1>
+                            Do you have a tendency to get aggressive?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Yes" name="Aggresiveness" id="q14o1" required/>
+                            <label for="q14o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value="No" name="Aggresiveness" id="q14o2" />
+                            <label for="q14o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que15">
+                    <div class="col-lg-6">
+                        <h1>
+                            If you are a female, do you feel low during or before the menstrual period?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Yes" name="LowDuringMenstrualPeriod" id="q15o1" />
+                            <label for="q15o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value="No" name="MenstrualState" id="q15o2" />
+                            <label for="q15o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que16">
+                    <div class="col-lg-6">
+                        <h1>
+                            Do you have any major physical illness?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Yes" name="MajorIllness" id="q16o1" required/>
+                            <label for="q16o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value="No" name="MajorIllness" id="q16o2" />
+                            <label for="q16o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que17">
+                    <div class="col-lg-6">
+                        <h1>
+                            Do you frequently find comparing yourself to others?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Yes" name="ComparisionWithOthers" id="q17o1" required/>
+                            <label for="q17o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value="No" name="ComparisionWithOthers" id="q17o2" />
+                            <label for="q17o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="que row" id="que18">
+                    <div class="col-lg-6">
+                        <h1>
+                            Do you feel anxious and/or tend to overthink?
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="options">
+                            <input type="radio" value="Yes" name="Anxiety" id="q18o1" required/>
+                            <label for="q18o1"><h3 class="o1">Yes</h3></label>
+
+                            <input type="radio" value="No" name="Anxiety" id="q18o2" />
+                            <label for="q18o2"><h3 class="o2">No</h3></label>
+                        </div>
+                    </div>
+                </div>
+
+                <% if(logged == true){ %>
+                    <% }else{ %>
+                        <div class="que row" id="que19">
+                            <div class="col-lg-6">
+                                <h1>
+                                    Are you Male or Female ?
+                                </h1>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="options">
+                                    <input type="radio" value="Male" name="Gender" id="q19o1" required/>
+                                    <label for="q19o1"><h3 class="o1">Male</h3></label>
+        
+                                    <input type="radio" value="Female" name="Gender" id="q19o2" required/>
+                                    <label for="q19o2"><h3 class="o2">Female</h3></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="que row colour6" id="age-input">
+                            <div class="col-lg-6">
+                                <h1>
+                                    What is your Age?
+                                </h1>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="options">
+                                    <input type="number"class="form-control" name="Age" id="age" placeholder="Enter Age" required/>
+                                </div>
+                            </div>
+                        </div>
+                  <% } %>
+
+                <div class="row que thankyou-submit" id="">
+                    <div class="col-lg-12">
+                        <h1>
+                            Thank You For Answering.
+                        </h1>
+                    </div>
+                    <div class="col-lg-12">
+                        <p>Ready to Submit?<br><a href="#que1">Recheck</a> or</p>
+                        <button
+                            class="btn btn-lg btn-outline-dark"
+                            type="submit"
+                        >
+                            Submit My Answers
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <p>Copyright @ Enhancesio</p>
+            </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="questions/script/que-script.js"></script>
+    </body>
+</html>

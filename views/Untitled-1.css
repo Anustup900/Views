@@ -1,0 +1,57 @@
+
+
+@keyframes bgcolor {
+    0% {
+        background-color: #E74C3C;
+    }
+    14.2%{
+        background-color: rgb(156, 41, 28);
+    }
+    28.4%{
+        background-color: rgb(238, 147, 0);
+    }
+    42.6% {
+        background-color: #157a29;
+    }
+    56.8%{
+        background-color: rgb(96, 163, 19);
+    }
+    71% {
+        background-color: rgb(26, 115, 194);
+    }
+    85.2% {
+        background-color: #AB47BC;
+    }
+    100%{
+        background-color: #E74C3C;
+    }
+}
+
+/*#157a29*/
+
+@keyframes bgcolor {
+    0% {
+        background-color: violet;
+    }
+    14.2%{
+        background-color: indigo;
+    }
+    28.4%{
+        background-color: blue;
+    }
+    42.6% {
+        background-color: rgb(141, 155, 12);
+    }
+    56.8%{
+        background-color: rgb(96, 163, 19);
+    }
+    71% {
+        background-color: rgb(26, 115, 194);
+    }
+    85.2% {
+        background-color: #AB47BC;
+    }
+    100%{
+        background-color: #E74C3C;
+    }
+}

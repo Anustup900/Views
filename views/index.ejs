@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enhancesio</title>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap" rel="stylesheet">
+            <script src="https://kit.fontawesome.com/c00227cd9f.js" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link rel="stylesheet" href="css/styles.css">
+            <link rel="stylesheet" href="css/backgroundani.css">
+
+            <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+    <div class="all">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="/" class="title"><h1>MAN KI BAAT</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <% if(cta== ""){ %>
+                    <li class="nav-item"><a href="/login">Login</a></li>
+                <% } %>
+                
+                <li class="nav-item"><a href="/questions">Questions</a></li>
+                <li class="nav-item"><a href="#aboutsection">About Us</a></li>
+              </ul>
+            </div>
+        </nav>
+        <div class="banner">
+            <section class="wrapper">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+            </section>
+            <h1>Your health matters.</h1>
+            <% if(cta== ""){ %>
+            <h2>Signup or Login to continue.</h2>
+            <% } else { %>
+            <h2>Let's Identify Your situation</h2>
+            <% } %>
+            <div class="login">
+                <% if(cta!= ""){ %>
+                <a href="/questions"><button class="btn btn-outline-light btn-lg"><%=cta%></button></a>
+                <% }else{ %>
+                <a href="/login"><button class="btn btn-outline-light btn-lg">Signup</button></a>
+                <a href="/login"><button class="btn btn-outline-light btn-lg">Login</button></a>
+                <% } %>
+            </div>
+        </div>
+        <div class="selfquestions cardd">
+            <div>
+                <h2>Is your anxiety making it harder for you to breathe every day?
+                </h2>
+            </div>
+            <div>
+                <h2>Is your stress taking away the happiness in your life second by second?
+                </h2>
+            </div>
+            <div>
+                <h2>Are you looking for a hand to hold and shoulder for support?
+                </h2>
+            </div>
+            <div>
+                <h2>We are here for you!
+                </h2>
+            </div>
+            <div>
+                <h2>Share with us your Man Ki Baat and watch your smile widen every day.
+                </h2>
+            </div>
+        </div>
+        <div class="welcomenote cardd">
+            <h2>Welcome to Man Ki Baat
+            </h2>
+            <h3>Man Ki Baat welcomes you into a world of happiness and serenity. With an aim to create a world where every individual is mentally sound and happy. Man Ki Baat works as an artificially intelligent pocket doctor to detect, predict and prevent depression.<br></h3>
+            <h3>Upon coming across a report which stated, that every year 10 million people in the country are diagnosed with depression, Man Ki  Baat was created with an aim to curb the suicide curve by giving the depressed people a safe and healthy platform to heal.<br></h3>
+            <h3>The application has been created after studying the current scenario and statistics of mental health, which showed that almost every individual of today is under stress due to varied reasons like job, education, family, etc. <br></h3>
+            <h2 class="quoteh2">Mental health is not a destination, but a process. Man Ki Baat is here to hold your hand through journey, however long it may be.</h3>
+        </div>
+        <div class="mission cardd">
+            <h2>Our mission</h2>
+            <h3>To create a safe community for individuals to talk about their mental health and contribute to the cause of curbing the suicide rate all over the globe.
+</h3>
+        </div>
+        <div id="aboutsection" class="about cardd">
+            <h2>About us</h2>
+            <h3>According to a WHO report,</h3>
+            <h2 class="quoteh2">Every year 4.4 billion people in the world commit suicide due to depression.</h2>
+            
+            <h3><b>The winters of 2019:</b> An idea struck us; to handhold the depressed individuals of the country through their struggles and journey. Our team came up with the idea of creating an Artificial Intelligence based ‘Pocket Doctor’ that could detect, predict and prevent depression.</h3>
+            
+            <h2>Promise to you.</h2>
+            <h3>There is no one better to treat a sad heart than a friend. At Man Ki Baat, we promise to be your friend through the good and bad. We not just aim to treat you in the best way possible, but will also make you socially strong and happy. Be it stress, anxiety or depression, we help you see beyond the problems, and focus on the joy of life. Take the test now and let us help you!</h3>
+            <h2 class="quoteh2">“The universe lies within you.”</h2>
+            <div class="learnmore">
+                <a href="/knowmore">How it Works?</a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="login">
+                <a href="/login"><button class="btn btn-outline-light btn-lg">Signup</button></a>
+                <a href="/login"><button class="btn btn-outline-light btn-lg">Login</button></a>
+            </div>
+            <div class="main-footer">
+                <div class="contactus">
+                    <div class="row">
+                        <div class="col">
+                            <img src="img/logomin.ico" alt="">
+                        </div>
+                        <div class="col cu">
+                        <h3>Contact Us:</h3>
+                        <p>mankibaat.pvt.ltd@gmail.com</p>
+                        <a href="https://www.mankibaat.tech/"><p>www.mankibaat.tech</p></a>
+                        <p>Phone : +91 98366 06960</p>
+                        <div class="row socialmedia">
+                            <a href="https://www.instagram.com/mankibaat.pvt.ltd/" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+                            <a href="https://www.facebook.com/mankibaat.pvt.ltd/" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+                            <a href="" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                            <a href="" target="_blank"><i class="fab fa-pinterest fa-3x"></i></a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <p>Copyright @ 2020 MAN KI BAAT</p>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

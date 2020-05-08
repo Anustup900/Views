@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enhancesio - Login or Signup</title>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap" rel="stylesheet">
+            <script src="https://kit.fontawesome.com/c00227cd9f.js" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link rel="stylesheet" href="css/loginstyles.css">
+            <link rel="stylesheet" href="css/backgroundani.css">
+
+            <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+    <div class="all">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="/" class="title"><h1>Enhancesio</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="/">Home</a></li>
+                <li class="nav-item"><a href="/questions">Questions</a></li>
+              </ul>
+            </div>
+        </nav>
+        <div class="banner">
+            <section class="wrapper">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+            </section>
+            <div class="login-popup">
+                <div class="row">
+                    <div class="signup col-lg-6 col-md-12">
+                      <div class="col-lg-12">
+                        <% if(fail){%>
+                          <h4 style = "color:red;"><%=fail%></h4>
+                        <%}%>
+                        <h2>Signup</h2>
+                        <form action = '/signup' method="POST">
+                            <div class="form-group">
+                              <label for="name">Full Name</label>
+                              <input type="text" name = "name" class="form-control" id="email" aria-describedby="FullName" required placeholder="Enter your full name">
+                              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="email">Email address</label>
+                              <input type="email" name = "email" class="form-control" id="email" aria-describedby="emailHelp" required placeholder="Enter email">
+                              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="password">Password</label>
+                              <input type="password"  name = "password" class="form-control" id="password" required placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                              <label class="gender for="date">Gender</label>
+                              <div class="options">
+                                <input type="radio" value = "Female"name="gender"  required />
+                                <label for="genderf" style="font-size: 85%;">Female</label>
+    
+                                <input type="radio" value = "Male"name="gender"  />
+                                <label for="genderm" style="font-size: 85%;">Male</label>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="date" for="date">Age</label>
+                              <input type="number" name = "Age" class="form-control" id="date"required>
+                              <small id="emailHelp"  class="form-text text-muted">We will never reveal you age to anyone</small>
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-outline-dark">Signup</button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="login col-lg-6 col-md-12">
+                      <div class="col-lg-12">
+                        
+                        <h2>Login</h2>
+                        <% if(success) { %>
+                          <h5 style = "color: green;"><%= success %></h5>
+                        <% } %> 
+                        <form action = '/login' method="POST">
+                            <div class="form-group">
+                              <label for="email" >Email address</label>
+                              <input type="email" name= "email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="password">Password</label>
+                              <input type="password" name= "password" class="form-control" id="password" placeholder="Password">
+                              <% if(messages.error){ %>
+                                <div style = "color: red;"><%= messages.error %></div>
+                                <% } %>
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-outline-dark">Login</button>
+                        </form>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyright @ 2020 Enhancesio</p>
+        </div>
+    </div>
+    </body>
+</html>

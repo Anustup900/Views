@@ -1,0 +1,305 @@
+html {
+    scroll-behavior: smooth;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: grey;
+    text-decoration: none;
+}
+body{
+    z-index: 0;
+    background-color: white;
+}
+h1{
+    font-family: 'Montserrat-black',sans-serif;
+    font-weight: bolder;
+}
+.banner{
+    background-color: #bfe5e1;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+}
+.navbar{
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    background-color: none;
+    padding-top: 30px;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 30px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+.navbar h1{
+    font-family: 'Montserrat-black',sans-serif;
+    font-weight: bolder;
+    transform: scale(1);
+}
+.nav-item a{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nav-item{
+    margin: 5px;
+}
+#navbarSupportedContent{
+    text-align: right;
+}
+.footer{
+    margin: 0px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+
+/*  Que form field  */
+.quebtn{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    color: white;
+    animation: standby 2s linear infinite;
+}
+.quebtn:hover{
+    opacity: 1;
+    color: white;
+}
+.quebtn:active{
+    opacity: 0.5;
+    color: black;
+}
+.quebtn p{
+    margin: 5px;
+    position: relative;
+    right: 40%;
+}
+.prev{
+    top: 15%;
+    transform: translateY(0%);
+}
+.next{
+    bottom: 0%;
+    transform: translateY(-100%);
+}
+.que-form-field{
+    text-align: center;
+}
+.que-form-field h1{
+    color: white;
+}
+.que{
+    padding: 10%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+.options h3{
+    width: 300px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: dashed;
+    color: white;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 5px;
+}
+.options h3:hover{
+    border-radius: 5px;
+    background-color: rgb(65, 65, 65);
+    color: #f6f6f6;
+}
+.options h3:active{
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    color: black;
+}
+input {
+    visibility:hidden;
+    position: absolute;
+}
+label {
+    cursor: pointer;
+}
+input:checked + label {
+    border-radius: 5px;
+    background-color: darkgrey;
+}
+.thankyou-submit{
+    position: relative;
+    text-align: center;
+    background-color: white;
+    color: black;
+    height: 75vh;
+}
+.thankyou-submit h1{
+    color: black;
+}
+.thankyou-submit button{
+    position: relative;
+    bottom: 20%;
+}
+.top-banner{
+    height: 38vh;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .que{
+        height: auto;
+    }
+}
+
+
+/* Question bg color */
+
+#que1{
+    background-color: #E74C3C;
+}
+#que2{
+    background-color: rgb(156, 41, 28);
+}
+#que3{
+    background-color: rgb(238, 147, 0);
+}
+#que4{
+    background-color: #157a29;
+}
+#que5{
+    background-color: rgb(96, 163, 19);
+}
+#que6{
+    background-color: rgb(26, 115, 194);
+}
+#que7{
+    background-color: #AB47BC;
+}
+#que8{
+    background-color: #E74C3C;
+}
+#que9{
+    background-color: rgb(156, 41, 28);
+}
+#que10{
+    background-color: rgb(238, 147, 0);
+}
+#que11{
+    background-color: #157a29;
+}
+#que12{
+    background-color: rgb(96, 163, 19);
+}
+#que13{
+    background-color: rgb(26, 115, 194);
+}
+#que14{
+    background-color: #AB47BC;
+}
+#que15{
+    background-color: #E74C3C;
+}
+#que16{
+    background-color: rgb(156, 41, 28);
+}
+#que17{
+    background-color: rgb(238, 147, 0);
+}
+#que18{
+    background-color: #157a29;
+}
+#que19{
+    background-color: rgb(96, 163, 19);
+}
+.age-input{
+    background-color: rgb(26, 115, 194);
+}
+
+
+
+.colour1{
+    background-color: #E74C3C;
+}
+.colour2{
+    background-color: rgb(156, 41, 28);
+}
+.colour3{
+    background-color: rgb(238, 147, 0);
+}
+.colour4{
+    background-color: #157a29;
+}
+.colour5{
+    background-color: rgb(96, 163, 19);
+}
+.colour6{
+    background-color: rgb(26, 115, 194);
+}
+.colour7{
+    background-color: #AB47BC;
+}
+
+/* #que8{
+    background-color: #E74C3C;
+}
+#que9{
+    background-color: rgb(156, 41, 28);
+}
+#que10{
+    background-color: rgb(238, 147, 0);
+}
+#que11{
+    background-color: #157a29;
+}
+#que12{
+    background-color: rgb(96, 163, 19);
+}
+#que13{
+    background-color: rgb(26, 115, 194);
+} */
+
+@keyframes bgcolor {
+    0% {
+        background-color: #E74C3C;
+    }
+    14.2%{
+        background-color: rgb(156, 41, 28);
+    }
+    28.4%{
+        background-color: rgb(238, 147, 0);
+    }
+    42.6% {
+        background-color: #157a29;
+    }
+    56.8%{
+        background-color: rgb(96, 163, 19);
+    }
+    71% {
+        background-color: rgb(26, 115, 194);
+    }
+    85.2% {
+        background-color: #AB47BC;
+    }
+    100%{
+        background-color: #E74C3C;
+    }
+}
+
+@keyframes standby{
+    0%{
+        opacity: 0.3;
+    }
+    50%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 0.3;
+    }
+}

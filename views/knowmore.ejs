@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MKB - Know more</title>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap" rel="stylesheet">
+            <script src="https://kit.fontawesome.com/c00227cd9f.js" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link rel="stylesheet" href="css/styles.css">
+            <link rel="stylesheet" href="css/backgroundani.css">
+
+            <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+    <div class="all">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="/" class="title"><h1>MAN KI BAAT</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="/">Home</a></li>
+                <% if(logged == true){ %>
+                <% }else{ %>
+                <li class="nav-item"><a href="/login">Login</a></li>
+                <% } %>
+                <li class="nav-item"><a href="/questions">Questions</a></li>
+              </ul>
+            </div>
+        </nav>
+        <div class="alll">
+            <section class="wrapper">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+            </section>
+            <div class="contentknowmore">
+                <div class="howitworks cardd">
+                    <h2>HOW IT WORKS?</h2>
+                    <h4>MANN KI BAAT is a Simple pocket supplement which is user friendly and interactive.</h4>
+                    <h3>Getting Started</h3>
+                    <h4>DOWNLOAD our application MANN KI BAAT from play store for a soft accessing or visit our website.</h4>
+                    <h3>Need to Enroll</h3>
+                    <h4>Getting signed up is a small formality and would make sure we can stick around through your entire journey of coping with mental health therapy and eventual improvement.</h4>
+                    <h4>You only need to give us your name, age and gender to get connected with us. However, you may also choose to be anonymous. We respect your privacy.</h4>
+                    <h3>Login through social-media</h3>
+                    <h4>You may also connect with us using your social media accounts, for easier, faster linking and access. We would never post without your permission.</h4>
+                    <h3>Our Methods</h3>
+                    <h4>You are taken to a user friendly questionnaire, where we ask you  few questions.</h4>
+                    <h4>These questions have been carefully designed after psychiatric consultations and medical research based on ICD 10 guidelines published by the WHO (World Health Organization).</h4>
+                </div>
+                <div class="howitworks cardd">
+                    <h2>WHAT’s NEXT?</h2>
+                    <h4>Mann Ki Baat judges your state of mind based on your answers to the questionnaire. If we find you stressed, we direct you to a chat bot. It's a place where you can talk to our other users anonymously.</h4>
+                    <h4>If you're found to be depressed or on the verge of depression , we take you to our TAT (Thematic Apperception Test) page. This is based on image processing and response. Our AI systems also take into account your visual reactions accessed via your webcam.</h4>
+                    <h4>If you aren't Depressed or Stressed, you're all good to go! Congratulations!</h4>
+                    <h4>We redirect you to the main app or site, where our support and smiling yoga team comes into action. They are going to make you smile, laugh and happy by chats, pop ups ,talks, animations and jokes.</h4>
+                    
+                    <h3>Want to see a Doctor?</h3>
+                    <h4>In case you want to visit a psychiatrist, we send you to the doctor based on present location and users are send to practo.</h4>
+                    
+                    <h3>Why Mann ki Baat?</h3>
+                    <h4>Mann Ki Baat has well framed attractive, mind freshening colours, images, jokes, smilies, smiling yoga videos and blogs which is not only going to make you happy but bring the golden smile on your face.</h4>
+                    
+                    <h3>WHAT BENEFITS AND AT WHAT COST WE PROVIDE?</h3>
+                    <ul>
+                        <li><h4>First login report will be free but at second login ,the report of depression test will cost Rs 10.</h4></li>
+                        <li><h4>If you want to go to chat bot through depression test then it will cost you Rs 25/per month.</h4></li>
+                        <li><h4>If you only want the chat bot services and you don’t need the depression test then it will cost you Rs 50/per month.</h4></li>
+                    </ul>
+                    <div class="learnmore">
+                        <a href="/">Goto Homepage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="login">
+                <% if(logged == true){ %>
+                <a href="/questions"><button class="btn btn-outline-light btn-lg">Take The Quiz</button></a>
+                <% }else{ %>
+                <a href="/login"><button class="btn btn-outline-light btn-lg">Signup</button></a>
+                <a href="/login"><button class="btn btn-outline-light btn-lg">Login</button></a>
+                <% } %>
+            </div>
+            <p>Copyright @ 2020 Enhancesio</p>
+        </div>
+    </div>
+    </body>
+</html>
